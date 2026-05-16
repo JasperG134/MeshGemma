@@ -1,0 +1,89 @@
+{
+  "expo": {
+    "name": "mesh-gemma",
+    "slug": "mesh-gemma",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ollamatesting.meshgemma",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Mesh Gemma tags incident reports with your location so peers can see where help is needed.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Mesh Gemma tags incident reports with your location so peers can see where help is needed.",
+        "NSBluetoothAlwaysUsageDescription": "Mesh Gemma uses Bluetooth to discover nearby peers when WiFi is unavailable.",
+        "NSBluetoothPeripheralUsageDescription": "Mesh Gemma advertises a Bluetooth peripheral so other phones can discover this node.",
+        "NSLocalNetworkUsageDescription": "Mesh Gemma discovers other phones on your local network to sync the offline feed.",
+        "NSCameraUsageDescription": "Mesh Gemma uses the camera so you can attach a photo of the disaster scene to an incident report.",
+        "NSPhotoLibraryUsageDescription": "Mesh Gemma reads photos so you can attach an existing image of the disaster scene to an incident report.",
+        "NSBonjourServices": [
+          "_meshgemma._tcp",
+          "_meshgemma-mc._tcp",
+          "_meshgemma-mc._udp"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_ADVERTISE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+        "android.permission.INTERNET"
+      ],
+      "package": "com.anonymous.meshgemma"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": [
+            "peripheral",
+            "central"
+          ],
+          "bluetoothAlwaysPermission": "Allow Mesh Gemma to connect to other devices via Bluetooth for mesh networking.",
+          "bluetoothPeripheralPermission": "Allow Mesh Gemma to run as a Bluetooth peripheral."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Mesh Gemma tags incident reports with your location so peers can see where help is needed."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Mesh Gemma reads photos so you can attach an existing image of the disaster scene to an incident report.",
+          "cameraPermission": "Mesh Gemma uses the camera so you can attach a photo of the disaster scene to an incident report."
+        }
+      ],
+      "llama.rn",
+      "@maplibre/maplibre-react-native",
+      "expo-dev-client",
+      "expo-font"
+    ]
+  }
+}

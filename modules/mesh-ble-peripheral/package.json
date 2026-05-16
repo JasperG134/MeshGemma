@@ -1,0 +1,9 @@
+{
+  "name": "mesh-ble-peripheral",
+  "version": "0.1.0",
+  "description": "Local Expo module wrapping CBPeripheralManager to advertise our identity over BLE.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["ios", "src", "expo-module.config.json"],
+  "private": true
+}

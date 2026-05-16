@@ -1,0 +1,9 @@
+{
+  "name": "mesh-multipeer",
+  "version": "0.1.0",
+  "description": "Local Expo module wrapping Apple MultipeerConnectivity for off-grid mesh.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["ios", "src", "expo-module.config.json"],
+  "private": true
+}
