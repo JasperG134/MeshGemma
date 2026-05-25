@@ -1,61 +1,98 @@
 # Quickscan-zelfcheck — MeshGemma
 
-Voor we de officiële [SIDN Quickscan](https://www.sidnfonds.nl/quickscan) en de [Toets je idee](https://www.sidnfonds.nl/aanvragen/pitchjeidee) invullen, lopen we hier intern langs de SIDN-criteria. Als alle 7 antwoorden hieronder eerlijk een groen vinkje zijn, is de aanvraag *kansrijk* en mogen we doorgaan met indienen. Eén rood antwoord = eerst aanpakken.
-
-## 1. Heeft het project een belofterijk idee dat tot een demo, pilot of experimenteel ontwerp uitgewerkt wordt?
-
-**Ja.** We hebben een werkende hackathon-bouwsteen (zie repo). De zes maanden gaan over een echte LoRa-pilot bouwen — exact de Pioniers-definitie.
-
-## 2. Levert het maatschappelijke meerwaarde, niet primair voor één bedrijf/persoon?
-
-**Ja.** Het resultaat is open source / CC-BY. Geen klant, geen B2B, geen commercieel product. Doelgroep: burgers, hulpverleners, vrijwillige radio-amateurs.
-
-## 3. Maakt het impact (in eerste instantie) in Nederland?
-
-**Ja.** Pilot­locaties zijn Veluwe (Gelderland) en stedelijk (Arnhem). Samenwerking met DARES/LocalMesh/MeshCore-NL/Waag/NIPV/veiligheidsregio. Verankering in de Nederlandse internet/crisis-sector is expliciet onderdeel van het projectplan.
-
-## 4. Is het innovatief — nieuw idee, bestaande techniek in nieuwe context, of nieuwe toepassing?
-
-**Ja.** De combinatie van: signed smartphone-mesh + LLM-bandbreedte-compressie + LoRa-gateway-bridge → een burger met alleen een telefoon kan deelnemen aan een LoRa-mesh-netwerk. Voor zover bekend bestaat die brug in Nederland nog niet in een open vorm.
-
-## 5. Past het in één van de drie SIDN-focusgebieden?
-
-**Ja — "Sterk internet".** Open, vrij, veerkrachtig, decentraal, niet centraal afsluitbaar.
-
-## 6. Voldoet de behoefte aan een aantoonbaar, onderbouwd probleem (geen "techniek op zoek naar een probleem")?
-
-**Ja.** NOS Nieuwsuur, NIPV, Spreekbuis/Ton Verlind, Rijksoverheid, de Veluwebrand 2026, en het bestaan van een groeiende vrijwillige MeshCore-beweging tonen alle dat het probleem reëel en erkend is. We citeren ten minste één Nederlandse expert in het projectplan (gesprek op 26 mei 2026).
-
-## 7. Wordt de kennis actief gedeeld?
-
-**Ja.** Code open source, documentatie CC-BY 4.0, eindrapport openbaar, demodag en lezing bij minstens DARES en/of SIDN.
+De officiële [SIDN Quickscan](https://www.sidnfonds.nl/quickscan) stelt zeven vragen. Hieronder de SIDN-vragen verbatim, met onze antwoorden. Als alles groen is, vullen we de Quickscan online in en dienen we via FundPro in.
 
 ---
 
-## Disqualifier-check (NIET-criteria van SIDN)
+### Vraag 0 (intro / scope-check)
 
-| Disqualifier | Wij? | Toelichting |
+> *"Je overweegt een Pioniers aanvraag in te dienen bij SIDN fonds. Je hebt een goed idee dat je wil uitwerken naar een meer robuust en duurzaam digitaal product of dienst (maximaal aan te vragen bedrag is €10.000,-)"*
+
+✅ **Ja.** We hebben een werkend hackathon-prototype dat we via een 6-maandse pilot willen uitwerken tot een echte demo met LoRa-radio en Android-client. Gevraagd bedrag: €10.000 incl. BTW.
+
+---
+
+### Vraag 1 — Past het project bij SIDN fonds?
+
+> *"SIDN fonds ondersteunt vernieuwende internetprojecten, die bijdragen aan een sterk internet, waarbij algemeen belang voorop staat en kennisdeling vanzelfsprekend is (zie ook de criteria)."*
+
+✅ **Ja.** MeshGemma valt onder het focusgebied **Sterk internet**: een open, vrij, decentraal, veerkrachtig netwerk dat blijft werken wanneer regulier internet (en de zendmasten ernaast) wegvalt. Geen centrale provider, geen aan/uit-knop. Algemeen belang: burgers in heel Nederland kunnen blijven communiceren tijdens uitval of crisis. Kennisdeling: alle code blijft open source (MIT/Apache 2.0), alle documentatie en meetdata onder CC-BY 4.0; eindrapport openbaar; demo/lezing bij minimaal twee NL-gelegenheden.
+
+---
+
+### Vraag 2 — Betreft het een innovatief project?
+
+> *"SIDN fonds wil bijdragen aan vernieuwende en grensverleggende projecten. Projecten betreffen een toepassing van een bestaand idee in een nieuwe context, een nieuwe toepassing van digitale technologie of een geheel nieuw idee."*
+
+✅ **Ja, op twee niveaus.** (a) De brug tussen smartphone-mesh en LoRa-mesh — één LoRa-gateway per wijk + telefoons als front-end zodat burgers zonder eigen LoRa-radio kunnen meedoen aan het bestaande Nederlandse MeshCore-netwerk — bestaat voor zover wij hebben kunnen vinden nog niet in een open vorm. (b) Een LLM (Gemma 4 E2B) op het toestel als **bandbreedte-compressor** voor radio-payload (mensentekst → ≤200 byte JSON) is een nieuwe toepassing van edge-AI in deze context.
+
+---
+
+### Vraag 3 — Heeft het project primair impact in Nederland?
+
+> *"SIDN fonds steunt projecten die in eerste instantie impact hebben op de Nederlandse internetcommunity."*
+
+✅ **Ja.** Pilot­locaties zijn Veluwe en stedelijk (Arnhem). We bouwen voort op de publiek gedeelde resultaten van Waag's MeshTesting (SIDN-gefinancierd, sep 2025–jan 2026) en sluiten frequentie/preset (SF7/CR5, 868 MHz) aan op het bestaande Nederlandse [LocalMesh / MeshCore-NL](https://www.localmesh.nl)-vrijwilligersnetwerk. Onze interop-bridge is bedoeld voor adoptie door de NL-mesh-community en eventueel de Nederlandse veiligheidsregio's die er nu al mee experimenteren (THISLINE, 2026).
+
+---
+
+### Vraag 4 — Is het project al gestart?
+
+> *"SIDN fonds ondersteunt alleen projecten die op het moment van toekennen nog niet van start zijn gegaan. Alleen kosten na toekenning van de financiële bijdrage van SIDN fonds kunnen worden opgevoerd in de projectbegroting."*
+
+✅ **Ja, voldoet.** Het 6-maands vervolgproject (LoRa-integratie, Android-client, veldpilot) start pas ná toekenning. Het hackathon-prototype is een afgeronde *aanloop* — geen kosten van vóór toekenning zijn in de begroting opgenomen.
+
+---
+
+### Vraag 5 — Is de looptijd van het project langer dan een half jaar?
+
+> *"Pioniers zijn projecten met een korte looptijd. Pioniers projecten die langer dan een half jaar duren, komen niet in aanmerking voor een bijdrage van SIDN fonds."*
+
+✅ **Nee.** Plan­ning is **exact 6 maanden** vanaf de toekenning. Zie werkpakketten in `begroting.md` en de gefaseerde planning in `projectplan.md` §5.
+
+---
+
+### Vraag 6 — Is een van de uitsluitingsgronden van toepassing?
+
+> *"Is een van de volgende punten van toepassing op het project?*
+> *• Het betreft het ontwikkelen van of verbeteren van een website, app of ai-tool, zonder dat sprake is van substantiële innovatie van diensten of functies/processen die verband houden met de doelstellingen van het SIDN fonds;*
+> *• Het betreft een verzoek tot sponsoring;*
+> *• Het betreft een project met een religieus of partijpolitiek doel;*
+> *• Het betreft structurele organisatiekosten, exploitatielasten en salariskosten, die niet toe te schrijven zijn aan het project."*
+
+✅ **Nee, geen enkele.** Toelichting per punt:
+
+- *App/AI-tool zonder substantiële innovatie* — niet van toepassing: zie Vraag 2. De combinatie smartphone-mesh + LoRa-gateway-bridge + LLM-bandbreedte-compressie is substantieel innovatief, en sluit direct aan op de SIDN-doelstelling "sterk, veerkrachtig en decentraal internet".
+- *Sponsoring* — niet van toepassing; dit is een ontwikkelingsproject.
+- *Religieus / partijpolitiek* — niet van toepassing.
+- *Structurele organisatiekosten / niet-toerekenbare salarissen* — niet van toepassing. We dienen in als natuurlijke personen, niet via een organisatie. De begroting bevat uitsluitend project-toerekenbare interne uren (à €60/uur, conform SIDN-norm) en projectspecifieke aanschaffen.
+
+---
+
+## Disqualifier-extra-check (uit Pioniers-pagina)
+
+Naast de zeven officiële Quickscan-vragen wijst SIDN op een paar extra disqualifiers; ook die hebben we langsgelopen:
+
+| Aanvullende disqualifier | Wij? | Toelichting |
 | --- | --- | --- |
-| App/AI-tool zonder substantiële innovatie | Nee | Zie punt 4. |
-| Alleen voor één bedrijf / B2B / productontwikkeling | Nee | Burgers, open source. |
-| Techniek zonder duidelijk probleem | Nee | Zie punt 6. |
-| Geen proactieve kennisdeling | Nee | Zie punt 7. |
-| Sponsoring / event / mediaproductie / religieus / politiek | Nee | Geen van toepassing. |
-| Structurele organisatiekosten of niet-toerekenbare salarissen | Nee | Begroting bevat uitsluitend project-toerekenbare uren + materiaal. |
+| Alleen voor één bedrijf / B2B / productontwikkeling | Nee | Burgers, open source, geen klant. |
+| Techniek zonder duidelijk probleem | Nee | NOS Nieuwsuur, NIPV, Rijksoverheid, Verlind: probleem is breed erkend. Zie `bronnen.md`. |
+| Geen proactieve kennisdeling | Nee | Open source, CC-BY, eindrapport, demo, lezing. |
+| Standalone media­productie / event / sponsoring | Nee | Een ontwikkel- en pilotproject met *kennisdeling* erbij, niet andersom. |
 
 ## Honesty-check
 
-Twee dingen die we *niet* verbergen, en in het projectplan en de video expliciet benoemen:
+Wat we *niet* verbergen, en in projectplan + video expliciet benoemen:
 
 - **TX is gesimuleerd in de huidige build.** Geen echte LoRa-radio aangesloten. Daar vragen we de subsidie voor.
-- **iOS-only nu.** Daar vragen we de subsidie deels ook voor.
+- **iOS-only nu.** Android komt er met deze subsidie ook bij.
 
-Het bewust uitsluiten van wat er niet klopt is voor SIDN een *plus*, niet een minpunt — Pioniers financiert experimenteel ontwerp, geen kant-en-klare producten.
+Bewust uitlichten van wat er niet klopt is voor SIDN een *plus*, niet een minpunt — Pioniers financiert experimenteel ontwerp, geen kant-en-klare producten.
 
 ## Mismatch met bestaand Waag-project?
 
-**Nee, complementair.** Waag's MeshTesting (sep 2025 – jan 2026) inventariseerde use cases voor *standalone Meshtastic LoRa-knooppunten*. Wij bouwen de smartphone-laag erbovenop. We citeren MeshTesting expliciet in het projectplan en stellen contact met Waag voor.
+**Nee, complementair.** Waag's MeshTesting (sep 2025 – jan 2026) inventariseerde use cases voor *standalone Meshtastic LoRa-knooppunten*. Wij bouwen de smartphone-laag erbovenop. We citeren MeshTesting publiek in het projectplan; geen contact nodig.
 
 ---
 
-**Conclusie:** zelfcheck groen. We dienen vandaag de officiële Quickscan in op de SIDN-site en vragen morgen via "Toets je idee" een kort officieel kansrijk-oordeel aan vóór we via FundPro indienen.
+**Conclusie:** zelfcheck groen op alle 7 vragen + alle disqualifiers. We vullen de Quickscan online in, vragen via "Toets je idee" eventueel een snelle bevestiging dat het kansrijk is, en dienen daarna via FundPro in.
